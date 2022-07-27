@@ -2,7 +2,9 @@
 
 # sbom-release-example
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/djschleen/sbom-release-example) 
 [![Go Report Card](https://goreportcard.com/badge/github.com/djschleen/sbom-release-example)](https://goreportcard.com/report/github.com/djschleen/sbom-release-example)
+[![Quality Checks](https://github.com/djschleen/sbom-release-example/actions/workflows/go-quality.yml/badge.svg)](https://github.com/djschleen/sbom-release-example/actions/workflows/go-quality.yml)
 
 An example project that demonstrates how to automate a release with SBOM generation using Syft.
 
@@ -22,7 +24,7 @@ To test, run the following in your local repository folder:
 
 ## Initializing Hookz
 
-This repository has a pre-commit action pipeline in it that can be used with [Hookz](https://github.com/devops-kung-fu/hookz). Use the instructions there to install the ```hookz``` command and then execute the following in your local repository folder:
+This repository has a pre-commit action pipeline in it that can be used with [Hookz](https://github.com/djschleen/hookz). Use the instructions there to install the ```hookz``` command and then execute the following in your local repository folder:
 
 ``` bash
 hookz init --verbose --verbose-output
