@@ -35,6 +35,11 @@ jobs:
           draft: false
           prerelease: false
 
+      - name: Release SBOM
+        uses: anchore/sbom-action/publish-sbom@v0
+        with:
+          sbom-artifact-match: ".*\\.spdx$"
+
       - name: Fix Upload URL
         id: upload_url
         run: echo ::set-output name=upload_url::$(echo "${{ steps.create_release.outputs.upload_url }}" | cut -d"{" -f1)
