@@ -1,7 +1,7 @@
 name: Go Quality Checks
 on: push
 jobs:
-  build:
+  quality-checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,7 +31,3 @@ jobs:
         run: golint ./...
       - name: gocyclo
         run: gocyclo .
-      - name: build sbom
-        uses: anchore/sbom-action@v0
-        with:
-          path: ./
