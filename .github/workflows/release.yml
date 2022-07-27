@@ -15,6 +15,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      
+      - name: Generate SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          path: .
 
       - name: Create Release
         id: create_release
@@ -70,11 +75,6 @@ jobs:
       #     output: sbom.json
       #     resolve-licenses: true
       #     version: "^v0"
-
-      - name: Generate SBOM
-        uses: anchore/sbom-action@v0
-        with:
-          path: .
 
       - name: Build amd64 Assets
         if: matrix.arch == 'amd64'
