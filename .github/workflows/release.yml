@@ -38,6 +38,7 @@ jobs:
         name: Generate SBOM
         uses: anchore/sbom-action@v0
         with:
+          artifact-name: sbom-release-example.spdx.json
           path: .
       - 
         name: Release SBOM
