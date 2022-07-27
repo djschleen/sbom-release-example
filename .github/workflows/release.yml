@@ -38,7 +38,7 @@ jobs:
       - name: Release SBOM
         uses: anchore/sbom-action/publish-sbom@v0
         with:
-          sbom-artifact-match: ".*\\.spdx$"
+          sbom-artifact-match: ".*\\.spdx.json$"
 
       - name: Fix Upload URL
         id: upload_url
