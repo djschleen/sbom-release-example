@@ -74,7 +74,7 @@ jobs:
       - name: Generate SBOM
         uses: anchore/sbom-action@v0
         with:
-          path: ./build/
+          path: .
 
       - name: Build amd64 Assets
         if: matrix.arch == 'amd64'
